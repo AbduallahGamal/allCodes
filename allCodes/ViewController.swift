@@ -8,12 +8,26 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+    /*        picker View             */
+    @IBOutlet weak var lbl_pick: UILabel!
+    var languageProgramming = ["Html", "C", "C++", "Java Script", "Php", "Java", "C#", "Python", "Perl", "Swift", "Flutter", "Dart"]
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
     }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return languageProgramming.count
+    }
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return languageProgramming[row]
+    }
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        lbl_pick.text = languageProgramming[row]
+    }
+    /////////////////////////////////////////////
+
     
     // making stepper code
     @IBOutlet weak var stepp: UIStepper!
@@ -22,6 +36,10 @@ class ViewController: UIViewController {
         img.alpha = CGFloat(stepp.value)
         
     }
+    
+ 
+    
+    
     
 }
 

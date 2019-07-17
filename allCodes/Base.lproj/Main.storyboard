@@ -19,14 +19,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="1" stepValue="0.050000000000000003" translatesAutoresizingMaskIntoConstraints="NO" id="qrL-RF-YLr">
-                                <rect key="frame" x="145" y="116" width="94" height="29"/>
+                                <rect key="frame" x="153" y="90" width="94" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="steppr:" destination="BYZ-38-t0r" eventType="valueChanged" id="K8l-wu-3Vk"/>
                                 </connections>
                             </stepper>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="AAW009_1_grande" translatesAutoresizingMaskIntoConstraints="NO" id="Y7d-AX-MX1">
-                                <rect key="frame" x="41" y="208" width="332" height="315"/>
+                                <rect key="frame" x="41" y="135" width="332" height="315"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4xm-0E-Vm5">
@@ -52,6 +52,21 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mlu-qi-MKc">
+                                <rect key="frame" x="123" y="693" width="169" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1qe-vh-ZUh">
+                                <rect key="frame" x="0.0" y="469" width="414" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="OoP-rx-72f"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="pPl-2p-zd9"/>
+                                </connections>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -66,6 +81,7 @@
                     </view>
                     <connections>
                         <outlet property="img" destination="Y7d-AX-MX1" id="jSH-JM-RmU"/>
+                        <outlet property="lbl_pick" destination="Mlu-qi-MKc" id="zKP-le-w1e"/>
                         <outlet property="stepp" destination="qrL-RF-YLr" id="5Pb-So-43e"/>
                     </connections>
                 </viewController>
