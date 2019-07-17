@@ -29,8 +29,39 @@
                                 <rect key="frame" x="41" y="208" width="332" height="315"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4xm-0E-Vm5">
+                                <rect key="frame" x="0.0" y="847" width="414" height="49"/>
+                                <items>
+                                    <barButtonItem title="Item" id="njW-tP-w8s"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="P1g-kx-aMc"/>
+                                    <barButtonItem title="Item" id="qsq-CQ-JTJ"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="zML-aJ-0qj"/>
+                                    <barButtonItem title="Item" id="c6J-qv-S2k"/>
+                                </items>
+                            </toolbar>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fy1-cr-f5I">
+                                <rect key="frame" x="0.0" y="32" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="fdZ-zm-kgt">
+                                        <barButtonItem key="leftBarButtonItem" title="Item" id="aXa-OU-tMj"/>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="fastForward" id="iSb-XL-e34">
+                                            <connections>
+                                                <segue destination="km5-Jv-6yM" kind="show" id="za4-MT-DaK"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fy1-cr-f5I" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="A51-6h-NGT"/>
+                            <constraint firstItem="4xm-0E-Vm5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="FgI-X5-EDS"/>
+                            <constraint firstAttribute="bottom" secondItem="4xm-0E-Vm5" secondAttribute="bottom" id="if7-7s-Bwf"/>
+                            <constraint firstItem="fy1-cr-f5I" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="is6-rR-oto"/>
+                            <constraint firstItem="4xm-0E-Vm5" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="obd-Mm-c0p"/>
+                            <constraint firstItem="fy1-cr-f5I" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="32" id="vRb-mQ-38k"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
@@ -41,6 +72,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="103.79464285714285"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="r9Y-35-bOu">
+            <objects>
+                <viewController id="km5-Jv-6yM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bgX-lD-6Zm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.8262626247" green="0.85118575510000005" blue="0.1045567743" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="dww-Q9-0dc"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8hx-ib-Ege" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="872" y="103"/>
         </scene>
     </scenes>
     <resources>
