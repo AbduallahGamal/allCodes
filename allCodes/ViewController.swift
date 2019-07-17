@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     /*        picker View             */
     @IBOutlet weak var lbl_pick: UILabel!
+    
     var languageProgramming = ["Html", "C", "C++", "Java Script", "Php", "Java", "C#", "Python", "Perl", "Swift", "Flutter", "Dart"]
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -36,9 +37,19 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         img.alpha = CGFloat(stepp.value)
         
     }
-    
- 
-    
+    @IBOutlet weak var img_view: UIImageView!
+    var co = 1
+    var myt = Timer()
+    @objc func anim(){
+        co += 1
+        if co == 11{
+            co = 0
+        }
+        img_view.image = UIImage(named: String(co))
+    }
+    @IBAction func btn_giphy(_ sender: Any) {
+        myt = Timer.scheduledTimer(timeInterval: 0.8, target: self, selector: #selector(ViewController.anim), userInfo: nil, repeats: true)
+    }
     
     
 }

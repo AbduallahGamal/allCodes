@@ -32,7 +32,11 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4xm-0E-Vm5">
                                 <rect key="frame" x="0.0" y="847" width="414" height="49"/>
                                 <items>
-                                    <barButtonItem title="Item" id="njW-tP-w8s"/>
+                                    <barButtonItem title="Item" id="njW-tP-w8s">
+                                        <connections>
+                                            <action selector="btn_giphy:" destination="BYZ-38-t0r" id="B15-PG-47s"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="P1g-kx-aMc"/>
                                     <barButtonItem title="Item" id="qsq-CQ-JTJ"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="zML-aJ-0qj"/>
@@ -67,6 +71,10 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="pPl-2p-zd9"/>
                                 </connections>
                             </pickerView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="hhr-Re-Cqk">
+                                <rect key="frame" x="26" y="728" width="363" height="104"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -81,6 +89,7 @@
                     </view>
                     <connections>
                         <outlet property="img" destination="Y7d-AX-MX1" id="jSH-JM-RmU"/>
+                        <outlet property="img_view" destination="hhr-Re-Cqk" id="07K-ec-h6h"/>
                         <outlet property="lbl_pick" destination="Mlu-qi-MKc" id="zKP-le-w1e"/>
                         <outlet property="stepp" destination="qrL-RF-YLr" id="5Pb-So-43e"/>
                     </connections>
@@ -106,6 +115,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="1" width="117.5" height="107.5"/>
         <image name="AAW009_1_grande" width="300" height="300"/>
     </resources>
 </document>
