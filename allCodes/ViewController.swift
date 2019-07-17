@@ -14,7 +14,14 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
-
+    
+    // making stepper code
+    @IBOutlet weak var stepp: UIStepper!
+    @IBOutlet weak var img: UIImageView!
+    @IBAction func steppr(_ sender: Any) {
+        img.alpha = CGFloat(stepp.value)
+        
+    }
+    
 }
 
